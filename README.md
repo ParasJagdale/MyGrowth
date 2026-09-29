@@ -375,6 +375,7 @@ MyGrowth/
       goalSuggestions.js
       initialData.js
       migrateGoals.js
+      migrateProfile.js
 
     hooks/
       useLocalStorage.js
@@ -413,6 +414,7 @@ MyGrowth/
 | `src/data/initialData.js` | Fictional sample profile and goals |
 | `src/data/goalSuggestions.js` | Skill and provider suggestions with logo URLs |
 | `src/data/migrateGoals.js` | Upgrades older saved sample data |
+| `src/data/migrateProfile.js` | Replaces the original Alex Patel sample while preserving user-edited profiles |
 | `src/utils/goalHelpers.js` | Filtering, public-goal selection, and summary calculations |
 | `src/App.css` | Application components and responsive design |
 

@@ -9,6 +9,7 @@ import "./App.css";
 import AppLayout from "./components/layout/AppLayout";
 import { defaultProfile, initialGoals } from "./data/initialData";
 import migrateGoals from "./data/migrateGoals";
+import migrateProfile from "./data/migrateProfile";
 import useLocalStorage from "./hooks/useLocalStorage";
 import GoalsPage from "./pages/GoalsPage";
 import OverviewPage from "./pages/OverviewPage";
@@ -24,6 +25,7 @@ function App() {
   const [profile, setProfile] = useLocalStorage(
     "mygrowth-profile",
     defaultProfile,
+    migrateProfile,
   );
   const [isGoalFormOpen, setIsGoalFormOpen] = useState(false);
 
