@@ -1,7 +1,11 @@
+function getLocalLogo(fileName) {
+  return `${import.meta.env.BASE_URL}logos/${fileName}`;
+}
+
 export const certificationProviderSuggestions = [
   {
     name: "OpenAI",
-    logoUrl: "/logos/openai.svg",
+    logoUrl: getLocalLogo("openai.svg"),
   },
   {
     name: "Google",
@@ -13,7 +17,7 @@ export const certificationProviderSuggestions = [
   },
   {
     name: "Microsoft",
-    logoUrl: "/logos/microsoft.svg",
+    logoUrl: getLocalLogo("microsoft.svg"),
   },
   {
     name: "GitHub",
@@ -32,7 +36,7 @@ export const skillSuggestions = [
   },
   {
     name: "AWS",
-    logoUrl: "/logos/aws.svg",
+    logoUrl: getLocalLogo("aws.svg"),
   },
   {
     name: "Docker",

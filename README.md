@@ -13,6 +13,7 @@ The project was created as a beginner-friendly React learning project and as a f
 - [Application routes](#application-routes)
 - [Technology](#technology)
 - [Getting started](#getting-started)
+- [Deployment](#deployment)
 - [How to use the application](#how-to-use-the-application)
 - [Architecture and data flow](#architecture-and-data-flow)
 - [Project structure](#project-structure)
@@ -163,6 +164,14 @@ These records are demonstration data and must not be treated as verified real-wo
 
 Although the project has multiple URLs, it is still a single-page application. React Router changes the visible page without requesting a completely new HTML document during normal navigation.
 
+The deployed GitHub Pages build uses hash-based routes, for example:
+
+```text
+https://parasjagdale.github.io/MyGrowth/#/skills
+```
+
+Hash routing allows every page to load correctly when a deployed URL is refreshed.
+
 ## Technology
 
 - React 19
@@ -215,6 +224,26 @@ npm run lint     # Run ESLint checks
 ```
 
 The `node_modules` directory does not need to be transferred to another computer. Running `npm install` recreates it from `package.json` and `package-lock.json`.
+
+## Deployment
+
+The project is configured for GitHub Pages at:
+
+```text
+https://parasjagdale.github.io/MyGrowth/
+```
+
+The workflow in `.github/workflows/deploy.yml` automatically installs dependencies, creates the Vite production build, uploads the `dist` directory, and deploys it whenever a change is pushed to `main`.
+
+To enable the first deployment:
+
+1. Open the GitHub repository.
+2. Select **Settings**.
+3. Select **Pages** under **Code and automation**.
+4. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+5. Open the **Actions** tab and monitor the deployment workflow.
+
+After GitHub Pages is enabled, every future push to `main` deploys automatically.
 
 ## How to use the application
 
